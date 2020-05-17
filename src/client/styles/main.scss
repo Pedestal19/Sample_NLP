@@ -1,18 +1,14 @@
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
 
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0.5rem 0;
-}
 
 h3 {
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0.5rem 0;
+}
+
+h3 span {
+  font-size: 16px;
+  font-style: italic !important;
 }
 
 h4 {
@@ -24,20 +20,23 @@ h4 {
 p {
   font-size: 1.6rem;
   margin: 0.5rem 0;
+  color: whitesmoke;
 }
 
+// body {
+//   background-color: #8E78FD;
+//   min-height: 100vh;
+// }
+
 body {
-  background-color: #ffffff;
-  min-height: 100vh;
+  background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 main {
   padding: 8rem;
 }
 
-// Tablet
-@media only screen and (max-width: 768px) {
-  main {
-    padding: 8rem 1rem;
-  }
-}
