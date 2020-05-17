@@ -1,7 +1,0 @@
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css);
-@import url(https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js);
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js);
-body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,code,img,form,label,footer,header,menu,nav,section{margin:0;padding:0;border:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1.2}ol,ul{list-style:none}blockquote,q{quotes:none}
-
-h3{font-size:1.8rem;font-weight:bold;margin:0.5rem 0}h3 span{font-size:16px;font-style:italic !important}h4{font-size:1.6rem;font-weight:bold;margin:0.5rem 0}p{font-size:1.6rem;margin:0.5rem 0;color:whitesmoke}body{background:url("https://source.unsplash.com/twukN12EN7c/1920x1080") no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;-o-background-size:cover}main{padding:8rem}
-
