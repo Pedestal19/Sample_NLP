@@ -1,25 +1,37 @@
 function handleCallAylienForNLP(event) {
+
   event.preventDefault();
+
   const url = document.getElementById("test-url").value;
+  const polarity = document.getElementById("polarity");
+  const polarity_confidence = document.getElementById("polarity_confidence");
+  const subjectivity = document.getElementById("subjectivity");
+  const subjectivity_confidence = document.getElementById("subjectivity_confidence");
+  const textDetails = document.getElementById("textDetails");
+  const apiMethod = "POST";
+  const apiMode = "cors";
+  const apiContentType = "application/json";
+
+
   if (!url) return;
   console.log(url);
-  fetch("/article", {
-    method: "POST",
-    mode: "cors",
+  fetch("/analyseText", {
+    method: apiMethod,
+    mode: apiMode,
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": apiContentType
     },
     body: JSON.stringify({ text: url })
   })
     .then(res => res.json())
     .then(data => {
-      document.getElementById("polarity").innerHTML = data.polarity;
-      document.getElementById("subjectivity").innerHTML = data.subjectivity;
-      document.getElementById("polarity_confidence").innerHTML =
+      polarity.innerHTML = data.polarity;
+      subjectivity.innerHTML = data.subjectivity;
+      polarity_confidence.innerHTML =
         data.polarity_confidence;
-      document.getElementById("subjectivity_confidence").innerHTML =
+      subjectivity_confidence.innerHTML =
         data.subjectivity_confidence;
-      document.getElementById("excerpt").innerHTML = data.text;
+        textDetails.innerHTML = data.text;
     });
 }
 

@@ -7,7 +7,9 @@
   <body>
     
     <main>
-      <p class="jumbotron text-center">NLP Demo</p>
+      <div class="card bg-dark text-white">
+        <div class="card-body">NLP Demo using Aylien</div>
+      </div>
 
       <hr />
 
@@ -23,6 +25,7 @@
 
       <section class="url-results">
         <ul>
+          <div class="card bg-success text-white">
           <li>
             <h3>Text Polarity: <span id="polarity"></span></h3>
             
@@ -36,12 +39,13 @@
             <h3>Confidence: <span id="subjectivity_confidence"></span></h3>
 
           </li>
+          </div>
 
           <li>
             <br/><br/>
             <h3>Text Details:</h3>
             <hr/>
-            <p id="excerpt"></p>
+            <p id="textDetails"></p>
           </li>
         </ul>
       </section>

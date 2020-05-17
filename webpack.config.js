@@ -3,15 +3,17 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devHost = "localhost";
+const devPort = "5000";
 
-const ENV = {
-  DEV: "development",
-  PROD: "production"
+const runningEnvironment = {
+  Development: "development",
+  Production: "production"
 };
 
 const plugins = {
-  [ENV.DEV]: [],
-  [ENV.PROD]: [
+  [runningEnvironment.Development]: [],
+  [runningEnvironment.Production]: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
@@ -21,8 +23,8 @@ const plugins = {
 };
 
 const stylesUse = {
-  [ENV.DEV]: ["style-loader", "css-loader", "sass-loader"],
-  [ENV.PROD]: [
+  [runningEnvironment.Development]: ["style-loader", "css-loader", "sass-loader"],
+  [runningEnvironment.Production]: [
     "style-loader",
     MiniCssExtractPlugin.loader,
     "css-loader",
@@ -30,14 +32,14 @@ const stylesUse = {
   ]
 };
 
-module.exports = (env = ENV.DEV) => ({
+module.exports = (env = runningEnvironment.Development) => ({
   devServer: {
-    host: "localhost",
-    port: "3000",
+    host: devHost,
+    port: devPort,
     proxy: [
       {
-        context: ["/article", "/api"],
-        target: "http://localhost:8000"
+        context: ["/analyseText", "/api"],
+        target: "http://localhost:5000"
       }
     ],
     hot: true,
